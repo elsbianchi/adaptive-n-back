@@ -162,8 +162,8 @@ var credit_var = true //default to true
 
 // task specific variables
 var letters = 'bBdDgGtTvV'.split("")
-var num_blocks = 20 // number of adaptive blocks
-var base_num_trials = 20 // total num_trials = base + load 
+var num_blocks = 5 // number of adaptive blocks
+var base_num_trials = 5 // total num_trials = base + load 
 var control_before = Math.round(Math.random()) //0 control comes before test, 1, after
 var block_acc = 0 // record block accuracy to determine next blocks delay
 var delay = 2 // starting delay
