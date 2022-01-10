@@ -164,8 +164,8 @@ var credit_var = true //default to true
 
 // task specific variables
 var letters = 'bBdDgGtTvV'.split("")
-var num_blocks = 5 // number of adaptive blocks
-var base_num_trials = 5 // total num_trials = base + load 
+var num_blocks = 1 // number of adaptive blocks
+var base_num_trials = 6 // total num_trials = base + load 
 var control_before = Math.round(Math.random()) //0 control comes before test, 1, after
 var block_acc = 0 // record block accuracy to determine next blocks delay
 var delay = 2 // starting delay
@@ -213,7 +213,7 @@ var post_task_block = {
 
 /* define static blocks */
 var feedback_instruct_text =
-	'Welcome to the experiment. This task will take around 5 minutes. Press <strong>enter</strong> to begin.'
+	'Press <strong>enter</strong> to begin.'
 var feedback_instruct_block = {
 	type: 'poldrack-text',
 	cont_key: [13],
@@ -228,7 +228,7 @@ var feedback_instruct_block = {
 var instructions_block = {
 	type: 'poldrack-instructions',
 	pages: [
-		'<div class = "centerbox"><p class = "block-text">In this experiment you will see a sequence of letters presented one at a time. Your job is to respond by pressing the <strong>left arrow key</strong> when the letter matches the same letter that occured some number of trials before (the number of trials is called the "delay"), otherwise you should press the <strong>down arrow key</strong>. The letters will be both lower and upper case. You should ignore the case (so "t" matches "T").</p><p class = block-text>The specific delay you should pay attention to will differ between blocks of trials, and you will be told the delay before starting a block.</p><p class = block-text>For instance, if the delay is 2, you are supposed to press the left arrow key when the current letter matches the letter that occurred 2 trials ago. If you saw the sequence: g...G...v...T...b...t...b, you would press the left arrow key on the last "t" and the last "b" and the down arrow key for every other letter.</p><p class = block-text>On one block of trials there will be no delay. On this block you will be instructed to press the left arrow key to the presentation of a specific letter on that trial. For instance, the specific letter may be "t", in which case you would press the left arrow key to "t" or "T".</p></div>'
+		'<div class = "centerbox"><p class = "block-text">In this experiment you will see a sequence of letters presented one at a time. Your job is to respond by pressing the <strong>left arrow key</strong> when the letter matches the same letter that occured 2 trials before, otherwise you should press the <strong>down arrow key</strong>. The letters will be both lower and upper case. You should ignore the case (so "t" matches "T")</div>'
 	],
 	data: {
 		trial_id: 'instruction'
@@ -435,13 +435,14 @@ var adaptive_test_node = {
 //Set up experiment
 var adaptive_n_back_experiment = []
 adaptive_n_back_experiment.push(instruction_node);
-adaptive_n_back_experiment.push(start_practice_block)
-adaptive_n_back_experiment = adaptive_n_back_experiment.concat(practice_trials)
+// adaptive_n_back_experiment.push(start_practice_block)
+// adaptive_n_back_experiment = adaptive_n_back_experiment.concat(practice_trials)
 
-if (control_before === 0) {
+/*if (control_before === 0) {
 	adaptive_n_back_experiment.push(start_control_block)
 	adaptive_n_back_experiment = adaptive_n_back_experiment.concat(control_trials)
 }
+*/
 for (var b = 0; b < num_blocks; b++) { 
 	adaptive_n_back_experiment.push(start_adaptive_block)
 	adaptive_n_back_experiment.push(adaptive_test_node)
@@ -454,7 +455,7 @@ for (var b = 0; b < num_blocks; b++) {
 
 
 if (control_before == 1) {
-	adaptive_n_back_experiment.push(start_control_block)
+	// adaptive_n_back_experiment.push(start_control_block)
 	adaptive_n_back_experiment = adaptive_n_back_experiment.concat(control_trials)
 }
 //Set up control
