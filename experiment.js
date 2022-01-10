@@ -261,7 +261,7 @@ var instruction_node = {
 
 var end_block = {
 	type: 'poldrack-text',
-	text: '<div class = "centerbox"><p class = "center-block-text">Thanks for completing this task!</p><p class = center-block-text>Press <strong>enter</strong> to begin.</p></div>',
+	text: '<div class = "centerbox"><p class = "center-block-text">Thanks for completing this task!</p><p class = center-block-text>Press <strong>enter</strong> to continue.</p></div>',
 	cont_key: [13],
 	data: {
 		trial_id: "end",
@@ -459,5 +459,5 @@ if (control_before == 1) {
 	adaptive_n_back_experiment = adaptive_n_back_experiment.concat(control_trials)
 }
 //Set up control
-adaptive_n_back_experiment.push(post_task_block)
+// adaptive_n_back_experiment.push(post_task_block)
 adaptive_n_back_experiment.push(end_block)
