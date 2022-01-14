@@ -147,7 +147,7 @@ var getData = function() {
 }
 
 var getText = function() {
-	return '<div class = "centerbox"><p class = "block-text">In this test you will see a sequence of letters presented one at a time. </p><p class = center-block-text>Your job is to respond by pressing the <strong>left arrow key</strong> when the letter matches the same letter that occured 2 letters before, otherwise you should press the <strong>down arrow key</strong>. </p><p class = center-block-text>The letters will be both lower and upper case. You should ignore the case (so "t" matches "T") </p><p class = center-block-text>When you are ready, press <strong>enter</strong> to start the test.</div>'
+	return '<div class = "centerbox"><p class = "center-block-text">In this test you will see a sequence of letters presented one at a time. </p><p class = center-block-text>Your job is to respond by pressing the <strong>left arrow key</strong> when the letter matches the same letter that occured 2 letters before, otherwise you should press the <strong>down arrow key</strong>. </p><p class = center-block-text>The letters will be both lower and upper case. You should ignore the case (so "t" matches "T") </p><p class = center-block-text>When you are ready, press <strong>enter</strong> to start the test.</div>'
 }
 
 /* ************************************ */
