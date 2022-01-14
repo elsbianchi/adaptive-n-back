@@ -261,10 +261,10 @@ var end_block = {
 	type: 'poldrack-text',
 	text: '<div class = "centerbox"><p class = "center-block-text">Thanks for completing this task!</p><p class = center-block-text>Press <strong>enter</strong> to continue.</p></div>',
 	cont_key: [13],
-	data: {
-		trial_id: "end",
-    	exp_id: 'adaptive_n_back'
-	},
+	//data: {
+	//	trial_id: "end",
+    	//exp_id: 'adaptive_n_back'
+	//},
 	timing_response: 180000,
 	timing_post_trial: 0,
 	on_finish: assessPerformance
@@ -458,4 +458,5 @@ if (control_before == 1) {
 }
 //Set up control
 // adaptive_n_back_experiment.push(post_task_block)
-adaptive_n_back_experiment.push(end_block)
+adaptive_n_back_experiment.push(
+)
