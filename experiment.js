@@ -147,9 +147,7 @@ var getData = function() {
 }
 
 var getText = function() {
-	return '<div class = "centerbox"><p class = "block-text">In these next blocks, you should press the left arrow key when the current letter matches the letter that appeared ' +
-	delay +
-		' trials before. Otherwise press the down arrow key</p><p class = center-block-text>Press <strong>enter</strong> to begin.</p></div>'
+	return '<div class = "centerbox"><p class = "block-text">In this test you will see a sequence of letters presented one at a time. </p><p class = center-block-text>Your job is to respond by pressing the <strong>left arrow key</strong> when the letter matches the same letter that occured 2 letters before, otherwise you should press the <strong>down arrow key</strong>. </p><p class = center-block-text>The letters will be both lower and upper case. You should ignore the case (so "t" matches "T") </p><p class = center-block-text>When you are ready, press <strong>enter</strong> to start the test.</div>'
 }
 
 /* ************************************ */
@@ -434,7 +432,7 @@ var adaptive_test_node = {
 	
 //Set up experiment
 var adaptive_n_back_experiment = []
-adaptive_n_back_experiment.push(instruction_node);
+// adaptive_n_back_experiment.push(instruction_node);
 // adaptive_n_back_experiment.push(start_practice_block)
 // adaptive_n_back_experiment = adaptive_n_back_experiment.concat(practice_trials)
 
